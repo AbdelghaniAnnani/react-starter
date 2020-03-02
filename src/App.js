@@ -1,24 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/Sidebar.jsx';
+import Submission from './components/Submission.jsx';
+import "./components/css.css"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+      <div className="row">
+        <Sidebar/>
+        </div>
+        <div className="row form-side">
+        <Submission/>
+        </div>
+      </div>
     </div>
   );
 }
