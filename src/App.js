@@ -7,16 +7,7 @@ import "./components/css.css"
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-      <div className="row">
-        <Sidebar/>
-        </div>
-        <div className="row form-side">
         <Submission/>
-        </div>
-      </div>
-    </div>
   );
 }
 
