@@ -8,8 +8,10 @@ import "./components/css.css"
 class App extends React.Component{
   constructor(props) {
     super(props);
+    console.log(props.history.location);
      this.state = { message: "" };
   }
+
 
   callbackFunction = (childData) => {
       console.log(childData);
@@ -20,7 +22,10 @@ class App extends React.Component{
       <div>
         <Submission parentCallback = {this.callbackFunction}/>
         <h6>get from choices</h6>
-        <input value={this.state.message}/>
+        <input
+            type="text" value={this.state.message}/>
+          <button onClick={() => this.props.history.goBack()}>back</button>
+          <button onClick={() => this.props.history.push("/cat")}>scsdsd</button>
       </div>
   );}
 }
