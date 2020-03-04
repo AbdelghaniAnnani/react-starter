@@ -4,6 +4,7 @@ import './App.css';
 import Sidebar from './components/Sidebar.jsx';
 import Submission from './components/Submission.jsx';
 import "./components/css.css"
+import { Input, Button, Header } from 'semantic-ui-react'
 
 class App extends React.Component{
   constructor(props) {
@@ -21,11 +22,12 @@ class App extends React.Component{
   return (
       <div>
         <Submission parentCallback = {this.callbackFunction}/>
-        <h6>get from choices</h6>
-        <input
-            type="text" value={this.state.message}/>
-          <button onClick={() => this.props.history.goBack()}>back</button>
-          <button onClick={() => this.props.history.push("/cat")}>scsdsd</button>
+        <Header size='huge'>get from choices</Header>
+        <Input
+            type="text" value={this.state.message}
+            onChange={() => {}}/>
+          <Button onClick={() => this.props.history.goBack()}>back</Button>
+          <Button onClick={() => this.props.history.go(-2)}>Go</Button>
       </div>
   );}
 }

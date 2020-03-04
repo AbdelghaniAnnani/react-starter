@@ -1,3 +1,5 @@
+import path from "path";
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
@@ -9,7 +11,9 @@ import  Categories from './pages/Categories.jsx';
 import * as serviceWorker from './serviceWorker';
 import Sidebar from "./components/Sidebar";
 import Notfound from "./pages/NotFound";
-import Submission from "./components/Submission";
+import "../node_modules/semantic-ui-css/semantic.min.css"
+
+// import semanticCssPath;
 
 ReactDOM.render((
     <Router>

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import {Link} from "react-router-dom";
 import errorHoc from "../hocs/ErrorHoc";
+import { Button, Header } from 'semantic-ui-react'
 
 class Items extends React.Component {
     constructor(props) {
@@ -9,12 +10,12 @@ class Items extends React.Component {
     render() {
     return(
         <div>
-            <h2>Items</h2>
+            <Header>Items</Header>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                 into elec</p>
-            <button className="row form-side" type="button" onClick={this.props.data}>
+            <Button className="row form-side" type="button" onClick={this.props.data}>
                 Click
-            </button>
+            </Button>
         </div>
         );
     }

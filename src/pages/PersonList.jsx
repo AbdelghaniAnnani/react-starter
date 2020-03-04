@@ -1,6 +1,6 @@
 import React from 'react';
-
 import axios from 'axios';
+import { List } from 'semantic-ui-react'
 
 export default class PersonList extends React.PureComponent {
     constructor(props){
@@ -17,9 +17,7 @@ export default class PersonList extends React.PureComponent {
 
     render() {
         return (
-            <ul>
-                { this.state.persons.map(person => <div><li>{person.name}: {person.phone}</li></div>)}
-            </ul>
+            <List bulleted  items={this.state.persons.map(person => person.name)}/>
         )
     }
 }

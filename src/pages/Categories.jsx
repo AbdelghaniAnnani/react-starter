@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Button, Header } from 'semantic-ui-react'
 
 class Categories extends React.Component{
     constructor(props) {
@@ -8,15 +9,15 @@ class Categories extends React.Component{
     render() {
         return(
             <div>
-                <h2>Categories</h2>
+                <Header>Categories</Header>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                     into elec</p>
-                <button className="row form-side" type="button" onClick={() => {
+                <Button className="row form-side" type="button" onClick={() => {
                     this.setState({count: this.state.count + 1},
                         () => { console.log(this.state.count); });
                 }}>
                     Click
-                </button>
+                </Button>
             </div>
             )
         }

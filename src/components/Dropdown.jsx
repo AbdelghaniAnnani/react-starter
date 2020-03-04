@@ -1,4 +1,5 @@
 import React from 'react';
+import { Select } from 'semantic-ui-react'
 
 export  default function Dropdown(props) {
     var choices = [ "js", "python", "ruby"];
@@ -6,14 +7,11 @@ export  default function Dropdown(props) {
     return (
         <div>
             <label>Choose an option:</label>
-            <select onChange={(event) => {
+            <Select onChange={(event) => {
                 console.log(event.target.value);
                 props.parentCallback(event.target.value);
-            }}>
-                {
-                    choices.filter(choice => choice.startsWith(props.data)).map(choice  =>  <option key={choice} value={choice}>{choice}</option>)
-                }        
-            </select>
+            }} options={choices.map(choice => ({"key": choice, "value": choice, "text": choice}))}/>
+
         </div>
     );
   }

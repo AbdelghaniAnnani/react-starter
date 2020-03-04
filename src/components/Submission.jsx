@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Dropdown from './Dropdown.jsx'
+import { Button, Input } from 'semantic-ui-react'
 
 export default class Submission extends React.PureComponent{
     constructor(props){
@@ -14,13 +15,13 @@ export default class Submission extends React.PureComponent{
     sendData = () => {
         console.log(this.state);
         this.props.parentCallback(this.state.option);
-    }
+    };
     render () {
        return (<div>
             <h2>Form Submission</h2>
             <Dropdown data={this.state.data} parentCallback = {this.callbackFunction}/>
-            <input type="text" className="row form-side"/>
-       <button className="row form-side" type="button" onClick={this.sendData}>Click</button>
+            <Input type="text" className="row form-side ui focus input"/>
+       <Button className="row form-side ui primary  button" type="button" onClick={this.sendData}>Click</Button>
         </div>)
     }
   }
