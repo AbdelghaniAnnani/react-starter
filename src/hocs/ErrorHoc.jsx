@@ -1,15 +1,18 @@
-function errorHoc(WrappedComponent, error) {
+import React from 'react';
+
+const errorHoc = (WrappedComponent, error) => {
     return class extends React.Component {
-        throwError = () => {throw error};
         constructor(props) {
             super(props);
             this.state = {
-                errorBack: this.throwError()
+                errorBack: () => {throw error}
             };
         }
         render() {
-
-            return <WrappedComponent data={this.state.errorBack} />;
+            return(<div>
+                <WrappedComponent data={this.state.errorBack} />
+            </div>)
         }
     };
 }
+export default errorHoc;

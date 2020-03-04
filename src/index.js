@@ -23,7 +23,6 @@ ReactDOM.render((
                     <Route exact path="/" component={App} />
                     <Route path="/items" component={Items} />
                     <Route path="/cat" component={Categories} />
-                    <Route path="/categories" component={Notfound} />
                     <Route  path="/contact" component={Contact} />
                     <Route  path="*" component={Notfound} />
                 </Switch>
