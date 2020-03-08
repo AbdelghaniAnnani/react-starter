@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import PersonList from "./PersonList";
+import PersonList from "./PersonList.jsx";
 import { Button, Header } from 'semantic-ui-react'
 
 export  default function Contact(props){

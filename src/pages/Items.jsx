@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {Link} from "react-router-dom";
-import errorHoc from "../hocs/ErrorHoc";
+import errorHoc from "../hocs/ErrorHoc.jsx";
 import { Button, Header } from 'semantic-ui-react'
 
 class Items extends React.Component {
